@@ -62,6 +62,7 @@
   .section-note { color: var(--muted); margin: 0 0 22px; }
   .grid { display: grid; gap: 24px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
   .grid.one { grid-template-columns: 1fr; }
+  #more .grid { grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
   .card {
     background: var(--card); border: 1px solid var(--line);
     border-radius: 16px; padding: 28px;
@@ -111,9 +112,9 @@
     <h1>Lauren Chagaris</h1>
     <p>Applied data science and AI for energy and buildings. MS Data Science, Boston University, December 2026.</p>
     <div class="contact">
-      <a href="mailto:datalaur@bu.edu">Email</a>
-      <a href="https://www.linkedin.com/in/lchagaris">LinkedIn</a>
-      <a href="https://github.com/data-laur">GitHub</a>
+      <a href="mailto:datalaur@bu.edu" target="_blank" rel="noopener">Email</a>
+      <a href="https://www.linkedin.com/in/lchagaris" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/data-laur" target="_blank" rel="noopener">GitHub</a>
     </div>
   </div>
 </header>
@@ -122,7 +123,6 @@
   <div class="wrap">
     <a href="#featured">Featured</a>
     <a href="#coming-soon">Coming soon</a>
-    <a href="#strategy">Strategy</a>
     <a href="#more">More work</a>
   </div>
 </nav>
@@ -133,7 +133,6 @@
     <!-- FEATURED -->
     <section id="featured">
       <h2>Featured</h2>
-      <p class="section-note">Projects with a result, a deck, and code you can check.</p>
       <div class="grid">
 
         <article class="card">
@@ -142,10 +141,43 @@
           <p class="result">Flagged 10 of 97 buildings for review, worth about $159K and 576 t CO2 a year.</p>
           <p>Finds which buildings waste heat and what to fix first. Per-building models with calibrated 90% ranges, an ASHRAE accuracy gate, and a "can't judge" verdict instead of guessing. Built solo in one day at Hackachusetts 2026; deployed with Docker and CI/CD.</p>
           <div class="links">
-            <a href="decks/heat-check.pdf">Slide deck</a>
-            <a href="https://heat-check-4w7d.onrender.com">Live app</a>
-            <a href="https://www.youtube.com/watch?v=gHqYB2rRJCE&amp;list=PLVYepmDICTTY">Demo video</a>
-            <a href="https://github.com/Data-Laur/Hackachusetts-Energy-Project">Code</a>
+            <a href="heat-check.pdf" target="_blank" rel="noopener">Slide deck</a>
+            <a href="https://heat-check-4w7d.onrender.com" target="_blank" rel="noopener">Live app</a>
+            <a href="https://www.youtube.com/watch?v=gHqYB2rRJCE&amp;list=PLVYepmDICTTY" target="_blank" rel="noopener">Demo video</a>
+            <a href="https://github.com/Data-Laur/Hackachusetts-Energy-Project" target="_blank" rel="noopener">Code</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="badges"><span class="tag">ML · Energy · Telecom</span></div>
+          <h3>Project Zero-Watt</h3>
+          <p class="result">Cut about 25% of daily tower energy in simulation, worth $2.7M to $4.8M a year across a national network.</p>
+          <p>5G towers burn power around the clock, even when traffic is near zero. An XGBoost model forecasts traffic an hour ahead with 1.9% error and puts idle towers into deep sleep. A safety rule only allows sleep after three low readings in a row, and a 100-run stress test measured the risk of a wrong call at about 3%. Built on a physics-based simulation of tower power.</p>
+          <div class="links">
+            <a href="zero-watt.pdf" target="_blank" rel="noopener">Slide deck</a>
+            <a href="https://github.com/Data-Laur/t-mobile-green-energy-project" target="_blank" rel="noopener">Code</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="badges"><span class="tag">Analytics · Product · Go-to-market</span></div>
+          <h3>TaskRabbit Select</h3>
+          <p class="result">Raised my hourly rate 25% with no drop in client satisfaction, then turned the finding into a premium product and launch plan.</p>
+          <p>I analyzed 484 of my own TaskRabbit jobs across nearly four years to test whether clients pay for trust rather than price. Category, location, and timing predicted premium demand, and higher rates showed no link to lower tips. That led to "Select," a premium matching tier for top Taskers, with a go-to-market plan built around an NYC weekend pilot.</p>
+          <div class="links">
+            <a href="taskrabbit-gtm.pdf" target="_blank" rel="noopener">Slide deck</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="badges"><span class="badge">Master's Capstone</span><span class="tag">ML · Customer AI</span></div>
+          <h3>IntentCX: AI agent routing</h3>
+          <p class="result">Gradient Boosting reached 0.81 AUC (0.83 cross-validated) predicting which of 8,000 customers would convert.</p>
+          <p>Routes high-intent customers to premium AI agents and low-intent ones to a lower-cost path, cutting wasted spend and AI compute. Behavior drove the score; demographics added almost nothing, so routing can leave out sensitive attributes. Compared regression, classification, and clustering, and reported the null clustering result honestly. Boston University.</p>
+          <div class="links">
+            <a href="intentcx-deck.pdf" target="_blank" rel="noopener">Slide deck</a>
+            <a href="intentcx-report.pdf" target="_blank" rel="noopener">Technical report</a>
+            <a href="https://youtu.be/rBCHiEmTX4I" target="_blank" rel="noopener">Video</a>
           </div>
         </article>
 
@@ -158,22 +190,9 @@
           <p class="result">Found where BU's BigBelly bins overflow and where they sit empty, and showed how to move bins and cut pickups.</p>
           <p>Mapped BigBelly smart bin fill data along the Commonwealth Ave corridor to find hotspots and coldspots, comparing BU-owned and City of Boston bins. Recommended moving bins from cold to hot areas, optimizing pickup routes, and acquiring city bins in hotspots, in support of BU's goal to divert 90% of waste from landfill by 2030. Five-person team from BU, Northeastern, and Bentley; won the sustainability category at Civic Hacks.</p>
           <div class="links">
-            <a href="decks/bin-there-done-that.pdf">Slide deck</a>
-            <a href="https://bin-there-done-that-green.vercel.app/">Live dashboard</a>
-            <a href="https://github.com/tasnimahmed11/bin_there_done_that">Code</a>
-          </div>
-        </article>
-
-        <article class="card">
-          <div class="badges"><span class="tag">ML · Customer AI · Capstone</span></div>
-          <h3>IntentCX: AI agent routing</h3>
-          <p class="result">Gradient Boosting reached 0.81 AUC (0.83 cross-validated) predicting which of 8,000 customers would convert.</p>
-          <p>Routes high-intent customers to premium AI agents and low-intent ones to a lower-cost path, cutting wasted spend and AI compute. Behavior drove the score; demographics added almost nothing, so routing can leave out sensitive attributes. Compared regression, classification, and clustering, and reported the null clustering result honestly. Data science capstone, Boston University.</p>
-          <div class="links">
-            <a href="decks/intentcx.pdf">Slide deck</a>
-            <a href="papers/intentcx.pdf">Technical report</a>
-            <a href="https://youtu.be/rBCHiEmTX4I">Video</a>
-            <a href="https://github.com/Data-Laur/capstone-assignments">Code</a>
+            <a href="bin-there-done-that.pdf" target="_blank" rel="noopener">Slide deck</a>
+            <a href="https://bin-there-done-that-green.vercel.app/" target="_blank" rel="noopener">Live dashboard</a>
+            <a href="https://github.com/tasnimahmed11/bin_there_done_that" target="_blank" rel="noopener">Code</a>
           </div>
         </article>
 
@@ -183,8 +202,8 @@
           <p class="result">Proposes four enforceable rules for companies whose AI agents replace workers at scale.</p>
           <p>Klarna's AI assistant did the work of 700 employees in one month, with no notice or transition support required. The policy framework calls for advance notice to workers, public impact assessments, retraining funds paid from automation savings, and shared accountability for model providers. Responsible and Ethical Data Science, Boston University.</p>
           <div class="links">
-            <a href="papers/agentic-ai-labor-policy.pdf">Policy paper</a>
-            <a href="https://youtu.be/gfD2RSikmeI">Video</a>
+            <a href="agentic-ai-labor-policy.pdf" target="_blank" rel="noopener">Policy paper</a>
+            <a href="https://youtu.be/gfD2RSikmeI" target="_blank" rel="noopener">Video</a>
           </div>
         </article>
 
@@ -197,27 +216,12 @@
       <div class="grid one">
         <article class="card soon">
           <div class="badges">
+            <span class="badge">Climatebase Fellowship Capstone</span>
             <span class="badge">In progress · Early December 2026</span>
             <span class="tag">Data centers · Waste heat</span>
           </div>
           <h3>Thermal Intelligence</h3>
-          <p>Predicts how much heat a high-performance data center gives off, using Oak Ridge's Frontier supercomputer data, and scores which sites are good candidates to reuse it. The site scorecard reports what a community gets back: energy recoverable, homes heated, and CO2 avoided, with a Boston district energy case study. Climatebase Fellowship capstone.</p>
-        </article>
-      </div>
-    </section>
-
-    <!-- STRATEGY -->
-    <section id="strategy">
-      <h2>Strategy</h2>
-      <div class="grid one">
-        <article class="card">
-          <div class="badges"><span class="tag">Go-to-market · Product strategy</span></div>
-          <h3>TaskRabbit go-to-market strategy</h3>
-          <p class="result">Raised my hourly rate 25% with no drop in client satisfaction, then turned the finding into a premium product for TaskRabbit.</p>
-          <p>I analyzed 484 of my own TaskRabbit jobs across nearly four years to test whether clients pay for trust rather than price. Category, location, and timing predicted premium demand, and higher rates showed no link to lower tips. That led to "Select," a premium matching tier for top Taskers, with a go-to-market plan built around an NYC weekend pilot.</p>
-          <div class="links">
-            <a href="decks/taskrabbit-gtm.pdf">Slide deck</a>
-          </div>
+          <p>Predicts how much heat a high-performance data center gives off, using Oak Ridge's Frontier supercomputer data, and scores which sites are good candidates to reuse it. The site scorecard reports what a community gets back: energy recoverable, homes heated, and CO2 avoided, with a Boston district energy case study.</p>
         </article>
       </div>
     </section>
@@ -226,24 +230,12 @@
     <section id="more">
       <h2>More work</h2>
       <div class="grid">
-
-        <article class="card compact">
-          <div class="badges"><span class="tag">Energy · Telecom · Simulation</span></div>
-          <h3>Project Zero-Watt</h3>
-          <p>5G towers burn power around the clock, even when traffic is near zero. An XGBoost model forecasts traffic an hour ahead (1.9% error) and puts idle towers into deep sleep, cutting about 25% of daily energy in a simulated network, with a safety check that blocks sleep during traffic spikes.</p>
-          <div class="links">
-            <a href="decks/zero-watt.pdf">Slide deck</a>
-            <a href="https://github.com/Data-Laur/t-mobile-green-energy-project">Code</a>
-          </div>
-        </article>
-
         <article class="card compact">
           <div class="badges"><span class="tag">Text mining · Operations</span></div>
           <h3>The Chagaris Vibe Check</h3>
-          <a href="images/vibe-check.jpg"><img class="shot" src="images/vibe-check.jpg" alt="The Chagaris Vibe Check dashboard showing 561 lifetime tasks and a 4.94 composite rating"></a>
+          <a href="vibe-check.jpg" target="_blank" rel="noopener"><img class="shot" src="vibe-check.jpg" alt="The Chagaris Vibe Check dashboard showing 561 lifetime tasks and a 4.94 composite rating"></a>
           <p>A searchable audit of 190 verified client reviews across 561 tasks, using text mining to turn testimonials into evidence of reliability: 4.94 average rating, 310 five-star tasks.</p>
         </article>
-
       </div>
     </section>
 
