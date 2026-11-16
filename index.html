@@ -143,6 +143,18 @@
       <div class="grid">
 
         <article class="card">
+          <div class="badges"><span class="tag">ML · Buildings · Cooling · Deployed app</span></div>
+          <h3>Cooling Check</h3>
+          <p class="result">Flags buildings using more chilled water than the weather explains, and says "can't judge" instead of guessing.</p>
+          <p>A physics baseline plus machine learning, with calibrated 90% ranges. Upload hourly cooling data and the app checks units, location and clock before scoring, then shows which buildings to look at first and when the extra cooling began. Tested with faults I planted at known dates, on four campuses and on a second year the rules never saw. Deployed on Render with Docker.</p>
+          <p class="data"><strong>Data:</strong> Building Data Genome 2 (Miller et al., 2020), hourly chilled-water meters for university campuses in Orlando, Tempe, Princeton and Austin, 2016 to 2017, with local weather.</p>
+          <div class="links">
+            <a href="https://cooling-check.onrender.com/" target="_blank" rel="noopener">Live app</a>
+            <a href="https://github.com/Data-Laur/cooling-check" target="_blank" rel="noopener">Code</a>
+          </div>
+        </article>
+
+        <article class="card">
           <div class="badges"><span class="tag">ML · Buildings · Deployed app</span></div>
           <h3>Heat Check</h3>
           <p class="result">Flagged 10 of 97 buildings for review, worth about $159K and 576 t CO2 a year.</p>
